@@ -11,7 +11,21 @@ body {
   color: #98a6bd;
 }
 
-section {
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+main {
   width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,7 +38,7 @@ section {
 }
 
 @media (min-width: 376px) {
-  section {
+  main {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr;
@@ -33,49 +47,57 @@ section {
   }
 }
 
-section article {
+main article {
   padding: 1.5em 1.5rem;
 }
 
 @media (min-width: 376px) {
-  section article {
-    padding: 2.5em 2.5rem;
+  main article {
+    padding: 1.5em 2.5rem;
   }
 }
 
-section .title {
+main .title {
   margin: 0;
   font-size: 1.2rem;
   font-weight: 700;
 }
 
-section .article1 {
+main .article1 {
   background-color: white;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
 }
 
-section .article1 .title {
+@media (min-width: 376px) {
+  main .article1 {
+    padding: 2.5em 7rem 1rem 2.5rem;
+  }
+}
+
+main .article1 .title {
   color: #2cb5b2;
   font-size: 1.3rem;
+  font-weight: 400;
 }
 
-section .article1 .subtitle {
+main .article1 .subtitle {
   color: #c0df34;
+  font-size: 1rem;
 }
 
-section .article1 .description {
+main .article1 .description {
   font-size: 0.9rem;
-  line-height: 1.8rem;
+  line-height: 1.5rem;
 }
 
-section .article2 {
+main .article2 {
   background-color: #2cb5b2;
   color: white;
 }
 
-section .article2 .cost {
+main .article2 .cost {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,20 +107,19 @@ section .article2 .cost {
   color: white;
   font-size: 2.2rem;
   margin: 1rem 0;
-  font-weight: 700;
 }
 
-section .article2 .cost span {
+main .article2 .cost span {
   font-size: 1rem;
   margin-left: 0.6rem;
   opacity: 0.5;
 }
 
-section .article2 .description {
+main .article2 .description {
   margin-bottom: 2rem;
 }
 
-section .article2 .sign-up-button {
+main .article2 .sign-up-button {
   width: 100%;
   background-color: #c0df34;
   color: white;
@@ -111,19 +132,19 @@ section .article2 .sign-up-button {
           box-shadow: 1px 1px 4px #959494;
 }
 
-section .article3 {
+main .article3 {
   background-color: #4bbebc;
   color: white;
 }
 
-section .article3 .descriWhyUs {
+main .article3 .descriWhyUs {
   font-size: 0.9rem;
   opacity: 0.7;
   list-style-type: none;
   padding: 0;
 }
 
-section .article3 .descriWhyUs li {
+main .article3 .descriWhyUs li {
   margin-bottom: 0.2rem;
 }
 /*# sourceMappingURL=styles.css.map */
