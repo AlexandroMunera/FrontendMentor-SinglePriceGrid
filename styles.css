@@ -23,8 +23,24 @@ section {
   margin: 5rem 0;
 }
 
+@media (min-width: 376px) {
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    max-width: 41rem;
+  }
+}
+
 section article {
   padding: 1.5em 1.5rem;
+}
+
+@media (min-width: 376px) {
+  section article {
+    padding: 2.5em 2.5rem;
+  }
 }
 
 section .title {
@@ -35,10 +51,14 @@ section .title {
 
 section .article1 {
   background-color: white;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 section .article1 .title {
   color: #2cb5b2;
+  font-size: 1.3rem;
 }
 
 section .article1 .subtitle {
@@ -63,8 +83,9 @@ section .article2 .cost {
       -ms-flex-align: center;
           align-items: center;
   color: white;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin: 1rem 0;
+  font-weight: 700;
 }
 
 section .article2 .cost span {

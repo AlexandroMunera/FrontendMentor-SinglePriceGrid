@@ -34,8 +34,19 @@ section {
   flex-direction: column;
   margin: 5rem 0;
 
+  @media(min-width: 376px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 41rem;
+  }
+
   article {
     padding: 1.5em 1.5rem;
+
+    @media(min-width: 376px){
+    padding: 2.5em 2.5rem;
+
+    }
   }
 
   .title {
@@ -46,9 +57,12 @@ section {
 
   .article1 {
     background-color: white;
+    grid-column-start: 1;
+    grid-column-end: 3;
 
     .title {
         color: $Cyan;
+        font-size: 1.3rem;
     }
 
     .subtitle {
@@ -69,8 +83,9 @@ section {
       display: flex;
       align-items: center;
       color: white;
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin: 1rem 0;
+      font-weight: 700;
 
       span {
         font-size: 1rem;
